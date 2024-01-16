@@ -37,6 +37,7 @@ jobs:
         with:
           name: node-app
           path: dist # This should be your distribution path, not the root path
+
  
  # Deploy the application to Azure
   deploy:
