@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "\\public",
+    "\\src\\assets",
+    "\\src\\pages",
+    "\\src\\pages\\pages_controllers",
+    "\\src\\pages\\pages_css",
+    "\\src\\pages\\page_components",
+    "\\src\\pages\\screens"
+  ],
+  "PreviewInSolutionExplorer": false
+}
