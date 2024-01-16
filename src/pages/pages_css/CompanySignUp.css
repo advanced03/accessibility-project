@@ -1,0 +1,345 @@
+    :root {
+    --text-font-family: "Inter-Regular", Helvetica;
+    --text-font-size: 24px;
+    --text-font-style: normal;
+    --text-font-weight: 400;
+    --text-letter-spacing: 0px;
+    --text-line-height: normal;
+    }
+
+    
+    .aanmeldingspagina {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    }
+
+    .aanmeldingspagina .div {
+        background-color: #ffffff;
+        height: 1024px;
+        overflow: hidden;
+        position: relative;
+        width: 1440px;
+    }
+
+    .aanmeldingspagina input,
+    .aanmeldingspagina textarea {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        font-family: "ABeeZee-Italic", Helvetica;
+        font-size: 24px;
+        border-radius: 5px;
+        height: 40px;
+        width: 522px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .aanmeldingspagina textarea {
+        height: 161px;
+    }
+
+    .aanmeldingspagina .contact {
+        color: #000000;
+        font-family: "ABeeZee-Italic", Helvetica;
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 400;
+        white-space: nowrap;
+        width: 205px;
+    }
+
+    .aanmeldingspagina .green-circle {
+        background-color: #21cea1;
+        border-radius: 50%;
+        height: 20vw;
+        position: fixed;
+        bottom: -10%;
+        right: -8%;
+        width: 20vw;
+    }
+
+    .aanmeldingspagina .blue-circle {
+        background-color: #2b50ec;
+        border-radius: 50%;
+        height: 20vw;
+        position: fixed;
+        top: -15%;
+        left: -10%; 
+        width: 20vw;
+    }
+
+    .aanmeldingspagina .whole {
+        height: 959px;
+        left: 511px;
+        position: absolute;
+        top: 14px;
+        width: 523px;
+    }
+
+    .aanmeldingspagina .form {
+        height: 724px;
+        left: 1px;
+        position: absolute;
+        top: 72px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .mail {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 684px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .phone {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 625px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .name {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 567px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .contact {
+        color: #000000;
+        font-family: "ABeeZee-Italic", Helvetica;
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 400;
+        left: 2px;
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        top: 523px;
+        white-space: nowrap;
+        width: 205px;
+    }
+
+    .aanmeldingspagina .kvk {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 470px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .link {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 411px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .location {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 353px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .desc {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 161px;
+        left: 0;
+        position: absolute;
+        top: 175px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .name-2 {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 117px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .password {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 58px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .user {
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 5px;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .buttons {
+        height: 80px;
+        left: 1px;
+        position: absolute;
+        top: 879px;
+        width: 523px;
+    }
+
+    .aanmeldingspagina .next {
+        background-color: #2b50ec;
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 15px;
+        height: 80px;
+        left: 284px;
+        position: absolute;
+        top: 0;
+        width: 239px;
+        color: #ffffff;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "ABeeZee-Regular", Helvetica;
+    }
+
+    .aanmeldingspagina .overlap-group {
+        height: 63px;
+        left: 76px;
+        position: absolute;
+        top: 0;
+        width: 327px;
+    }
+
+    .aanmeldingspagina .logo-title {
+        height: 63px;
+        left: 0px;
+        position: absolute;
+        top: 0;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .title {
+        color: #000000;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 40px;
+        font-weight: 400;
+        left: 50%;
+        line-height: normal;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 223px;
+        top: 50%;
+    }
+
+    .aanmeldingspagina .logo {
+        height: 63px;
+        width: 57px;
+        background-image: url('./logo_small.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 88px;
+        position: absolute;
+    }
+
+    .aanmeldingspagina .login {
+        height: 22px;
+        left: 1px;
+        position: absolute;
+        top: 823px;
+        width: 522px;
+    }
+
+    .aanmeldingspagina .account {
+        color: #000000;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        left: 0;
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        top: -1px;
+        white-space: nowrap;
+        width: 261px;
+    }
+
+    .aanmeldingspagina .loginbutton {
+        color: #2441dd;
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        left: 255px;
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        top: -1px;
+        white-space: nowrap;
+        width: 119px;
+    }
+
+    .aanmeldingspagina .next:hover,
+    .aanmeldingspagina .next:active {
+        background-color: #2c579f;
+        cursor: pointer;
+    }
+
+    .aanmeldingspagina .next:active {
+        background-color: #1e407d;
+    }
+
+    .aanmeldingspagina .loginbutton:hover,
+    .aanmeldingspagina .loginbutton:active {
+        color: #1e407d;
+        cursor: pointer;
+    }
+
+    .aanmeldingspagina .loginbutton:active {
+        color: #2c579f;
+    }
