@@ -17,7 +17,7 @@ const AssignmentCreator = () => {
     };
 
     return (
-        <body className='achtergrond'> 
+        <body className="achtergrond" style={{ display: 'grid', placeItems: 'center' }}>
         <Container fluid id="assignment-creator" className="w-50 p-5">
         <h1>Opdracht aanmaken</h1>
         <NavbarComponent portalType="expert" />

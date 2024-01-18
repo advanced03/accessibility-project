@@ -6,11 +6,11 @@ import NavbarComponent from "./components/NavbarComponent";
 export const Ervaringsdeskundige = () => {
     return (
         
-        <body className="achtergrond">
+        <body className="achtergrond" style={{ display: 'grid', placeItems: 'center' }}>
             <Container fluid id="expert-portal" className="w-50 p-5"> 
             <h1>Portaal ervaringsdeskundige</h1>
                 <NavbarComponent portalType="expert" />
-                <Tab.Container id="list-group-tabs-example" className="tab" defaultActiveKey="#link1">
+                <Tab.Container id="list-group-tabs" className="tab" defaultActiveKey="#link1">
                     <Row>
                         <Col>
                             <ListGroup className="mb-5">
@@ -39,20 +39,20 @@ export const Ervaringsdeskundige = () => {
                         </Col>
                         <Col>
                             <Tab.Content>
-                                <Tab.Pane eventKey="#link1">Hello</Tab.Pane>
+                                <Tab.Pane eventKey="#link1">Helllo</Tab.Pane>
                                 <Tab.Pane eventKey="#link2">Test</Tab.Pane>
                                 <Tab.Pane eventKey="#link3">one</Tab.Pane>
                                 <Tab.Pane eventKey="#link4">two</Tab.Pane>
-                                <Tab.Pane eventKey="#link5">tree</Tab.Pane>
+                                <Tab.Pane eventKey="#link5">treee</Tab.Pane>
                                 <Tab.Pane eventKey="#link6">to the</Tab.Pane>
-                                <Tab.Pane eventKey="#link6">fo</Tab.Pane>
+                                <Tab.Pane eventKey="#link6">four</Tab.Pane>
                                 <Tab.Pane eventKey="#link7">bla bla bla</Tab.Pane>
                             </Tab.Content>
                         </Col>
                     </Row>
 
                     <Row>
-                    <h2>Geschiedenis</h2>
+                    <h2 className='mb-5'>Geschiedenis</h2>
                         <Col>
                             <ListGroup className="mb-5">
                                 <ListGroup.Item action href="#link8">

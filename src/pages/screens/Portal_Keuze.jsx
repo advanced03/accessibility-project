@@ -5,11 +5,12 @@ import "@/pages/pages_css/Portal_Keuze.css";
 
 const Portaalkeuze = ({ handlePortalButtonClick }) => {
   return (
-    <Container className="w-50">
-      <Image alt="Logo" src="/icons/logo.png" fluid/>
-      <h1 className="mb-4">Kies uw portaal:</h1>
+    <body className="achtergrond" style={{ display: 'grid', placeItems: 'center' }}>
+    <Container fluid className="w-50">
+      <Image alt="Logo" src="/icons/logo.png"  className="mb-5" fluid/>
+      <h1 className="portaltitle">Kies uw portaal:</h1>
 
-          <Card onClick={() => handlePortalButtonClick("company")} className="portal-card mb-5">
+          <Card onClick={() => handlePortalButtonClick("company")} className="portal-card mb-5 mt-5">
             <div className="button-content text-center">
               <h2>Bedrijf</h2>
               <img
@@ -37,6 +38,7 @@ const Portaalkeuze = ({ handlePortalButtonClick }) => {
             </div>
           </Card>
     </Container>
+    </body>
   );
 };
 

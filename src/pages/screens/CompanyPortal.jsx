@@ -6,7 +6,7 @@ import NavbarComponent from "./components/NavbarComponent";
 export const Ervaringsdeskundige = () => {
     return (
         
-        <body className="achtergrond">
+        <body className="achtergrond" style={{ display: 'grid', placeItems: 'center' }}>
             <Container fluid id="company-portal" className="w-50 p-5"> 
             <h1>Portaal Zakelijk</h1>
                 <NavbarComponent portalType="company" />

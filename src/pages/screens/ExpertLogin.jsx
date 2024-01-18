@@ -21,7 +21,7 @@ const ExpertLogin = ({
     };
 
     return (
-        <body className="achtergrond">
+        <body className="achtergrond" style={{ display: 'grid', placeItems: 'center' }}>
             <div id="login-form">
                 <h1>Inloggen</h1>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>

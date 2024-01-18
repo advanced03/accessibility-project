@@ -37,7 +37,7 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
     } = CompanySignUpController();
 
     return (
-        <body className="achtergrond">
+        <body className="achtergrond" style={{ display: 'grid', placeItems: 'center' }}>
             <Container fluid id="signup-form" className="w-50 p-5">
                 <h1>Account aanmaken</h1>
                 <Form

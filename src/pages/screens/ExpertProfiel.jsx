@@ -11,8 +11,8 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
     const handleShow = () => setShow(true);
 
     return (
-        <body className="achtergrond">
-            <Container fluid id="profile-form" className="w-50 p-5">
+        <body className="achtergrond" style={{ display: 'grid', placeItems: 'center' }}>
+            <Container fluid id="profile-form" className="w-50 p-5 mt-5">
                 <NavbarComponent portalType="expert" />
 
                 <div className="text-center">

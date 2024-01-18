@@ -5,15 +5,20 @@
 .button-content:hover {
   transform: scale(1.05);
 }
-.text-center {
-  text-align: center;
-}
+
 .company-icon, .people-icon {
   margin-bottom: 1rem;
 }
 .portal-card {
   background-color: #3051ea;
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 3vh;
 }
+
+.portaltitle {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
