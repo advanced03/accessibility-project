@@ -1,0 +1,6 @@
+@accessibility_projectg_HostAddress = http://localhost:5188
+
+GET {{accessibility_projectg_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
