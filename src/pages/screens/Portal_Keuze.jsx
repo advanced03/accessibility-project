@@ -5,7 +5,7 @@ import "@/pages/pages_css/Portal_Keuze.css";
 
 const Portaalkeuze = ({ handlePortalButtonClick }) => {
   return (
-    <body className="achtergrond" style={{ display: 'grid', placeItems: 'center' }}>
+    <body className="achtergrond" style={{ display: 'grid', placeItems: 'center', height: '100vh' }}>
     <Container fluid className="w-50">
       <Image alt="Logo" src="/icons/logo.png"  className="mb-5" fluid/>
       <h1 className="portaltitle">Kies uw portaal:</h1>

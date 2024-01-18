@@ -47,14 +47,14 @@ const ExpertLogin = ({
                         Aanmelden
                     </Button>
                     <Button
-                        href="expert_signup"
+                        href="expert_login"
                         variant="success"
                         type="submit"
                         className="m-3">
                         Registreren
                     </Button>
 
-                    <a href="" className="forgotPass ms-5"> Wachtwoord vergeten?</a>
+                    <a href="password" className="forgotPass ms-5"> Wachtwoord vergeten?</a>
                 </Form>
             </div>
         </body>
