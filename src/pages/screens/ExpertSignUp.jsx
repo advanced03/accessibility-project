@@ -9,7 +9,7 @@ import {
   Modal
 } from "react-bootstrap";
 import PropTypes from "prop-types";
-import "@/pages/pages_css/ExpertSignUp.css";
+import "@/pages/pages_css/SignUp.css";
 import ExpertSignUpController from "@/pages/pages_controllers/ExpertSignUp_Controller";
 
 export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {

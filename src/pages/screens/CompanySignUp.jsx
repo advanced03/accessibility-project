@@ -8,7 +8,7 @@ import {
     Container,
 } from "react-bootstrap";
 import PropTypes from "prop-types";
-import "@/pages/pages_css/ExpertSignUp.css";
+import "@/pages/pages_css/SignUp.css";
 import CompanySignUpController from "@/pages/pages_controllers/ExpertSignUp_Controller";
 
 export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
