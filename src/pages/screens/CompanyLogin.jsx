@@ -54,7 +54,7 @@ const CompanyLogin = ({
                         Registreren
                     </Button>
 
-                    <a href="" className="forgotPass ms-5"> Wachtwoord vergeten?</a>
+                    <a href="password" className="forgotPass ms-5"> Wachtwoord vergeten?</a>
                 </Form>
             </div>
         </body>

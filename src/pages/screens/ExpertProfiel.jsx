@@ -25,6 +25,7 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                     <FormControl
                         type="text"
                         placeholder="M."
+                        maxLength={1}
                     />
                     </Form.Group>
             
@@ -67,8 +68,9 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                 <Form.Group className="mb-3" controlId="formProfilePhoneNumber">
                     <Form.Label>Telefoonnummer</Form.Label>
                     <FormControl
-                        type="text"
+                        type="number"
                         placeholder="06 12345678"
+                        pattern="[0-9]{10}"
                     />
                 </Form.Group>
 

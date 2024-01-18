@@ -10,6 +10,7 @@ import AssignmentCreator from '@/pages/screens/AssignmentCreator.jsx'
 import CompanyPortal from '@/pages/screens/CompanyPortal.jsx'
 import ExpertProfiel from '@/pages/screens/ExpertProfiel.jsx'
 import CompanyProfiel from '@/pages/screens/CompanyProfiel.jsx'
+import Password from '@/pages/screens/Password.jsx'
 
 const PageNavigator = () => {
     const [userType, setUserType] = useState(null);
@@ -62,6 +63,7 @@ const PageNavigator = () => {
                 <Route path="/company_portal" element={<CompanyPortal />} />
                 <Route path="/expertProfiel" element={<ExpertProfiel />} />
                 <Route path="/companyProfiel" element={<CompanyProfiel />} />
+                <Route path="/password" element={<Password />} />
                 <Route index element={<Navigate to="/portal" />} />
             </Routes>
         </div>
