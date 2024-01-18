@@ -39,14 +39,13 @@ export const Ervaringsdeskundige = () => {
                         </Col>
                         <Col>
                             <Tab.Content>
-                                <Tab.Pane eventKey="#link1">Helllo</Tab.Pane>
-                                <Tab.Pane eventKey="#link2">Test</Tab.Pane>
-                                <Tab.Pane eventKey="#link3">one</Tab.Pane>
-                                <Tab.Pane eventKey="#link4">two</Tab.Pane>
-                                <Tab.Pane eventKey="#link5">treee</Tab.Pane>
-                                <Tab.Pane eventKey="#link6">to the</Tab.Pane>
-                                <Tab.Pane eventKey="#link6">four</Tab.Pane>
-                                <Tab.Pane eventKey="#link7">bla bla bla</Tab.Pane>
+                                <Tab.Pane eventKey="#link1">Opdracht 1</Tab.Pane>
+                                <Tab.Pane eventKey="#link2">Opdracht 2</Tab.Pane>
+                                <Tab.Pane eventKey="#link3">Opdracht 3</Tab.Pane>
+                                <Tab.Pane eventKey="#link4">Opdracht 4</Tab.Pane>
+                                <Tab.Pane eventKey="#link5">Opdracht 5</Tab.Pane>
+                                <Tab.Pane eventKey="#link6">Opdracht 6</Tab.Pane>
+                                <Tab.Pane eventKey="#link7">Opdracht 7</Tab.Pane>
                             </Tab.Content>
                         </Col>
                     </Row>
@@ -56,37 +55,37 @@ export const Ervaringsdeskundige = () => {
                         <Col>
                             <ListGroup className="mb-5">
                                 <ListGroup.Item action href="#link8">
-                                    Link 8
+                                Verlopen 1
                                 </ListGroup.Item>
                                 <ListGroup.Item action href="#link9">
-                                    Link 9
+                                Verlopen 2
                                 </ListGroup.Item>
                                 <ListGroup.Item action href="#link10">
-                                    Link 10
+                                Verlopen 3
                                 </ListGroup.Item>
                                 <ListGroup.Item action href="#link11">
-                                    Link 11
+                                Verlopen 4
                                 </ListGroup.Item>
                                 <ListGroup.Item action href="#link12">
-                                    Link 12
+                                Verlopen 5
                                 </ListGroup.Item>
                                 <ListGroup.Item action href="#link13">
-                                    Link 13
+                                Verlopen 6
                                 </ListGroup.Item>
                                 <ListGroup.Item action href="#link14">
-                                    Link 14
+                                Verlopen 7
                                 </ListGroup.Item>
                             </ListGroup>
                         </Col>
                         <Col>
                             <Tab.Content>
-                                <Tab.Pane eventKey="#link8">Hello</Tab.Pane>
-                                <Tab.Pane eventKey="#link9">Test1</Tab.Pane>
-                                <Tab.Pane eventKey="#link10">one2</Tab.Pane>
-                                <Tab.Pane eventKey="#link11">two3</Tab.Pane>
-                                <Tab.Pane eventKey="#link12">tree4</Tab.Pane>
-                                <Tab.Pane eventKey="#link13">to the5</Tab.Pane>
-                                <Tab.Pane eventKey="#link14">fo6</Tab.Pane>
+                                <Tab.Pane eventKey="#link8">opdr9</Tab.Pane>
+                                <Tab.Pane eventKey="#link9">opdr10</Tab.Pane>
+                                <Tab.Pane eventKey="#link10">opdr11</Tab.Pane>
+                                <Tab.Pane eventKey="#link11">opdr12</Tab.Pane>
+                                <Tab.Pane eventKey="#link12">opdr13</Tab.Pane>
+                                <Tab.Pane eventKey="#link13">opdr14</Tab.Pane>
+                                <Tab.Pane eventKey="#link14">opdr15</Tab.Pane>
                             </Tab.Content>
                         </Col>
                     </Row>
