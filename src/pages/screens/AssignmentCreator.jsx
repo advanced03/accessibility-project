@@ -17,9 +17,10 @@ const AssignmentCreator = () => {
     };
 
     return (
-        <div>
-        <Container fluid className="margin" >
-            <NavbarComponent/>
+        <body className='achtergrond'> 
+        <Container fluid id="assignment-creator" className="w-50 p-5">
+        <h1>Opdracht aanmaken</h1>
+        <NavbarComponent portalType="expert" />
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formAssignmentTitle">
                     <Form.Label>Titel</Form.Label>
@@ -66,7 +67,7 @@ const AssignmentCreator = () => {
                 </Button>
             </Form>
             </Container>
-        </div>
+        </body>
     );
 };
 

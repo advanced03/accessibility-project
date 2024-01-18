@@ -1,4 +1,18 @@
-.margin {
-    margin-top: 10rem;
-    max-width: 50%;
+#assignment-creator {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 17vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#assignment-creator h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+
+.achtergrond {
+    background: linear-gradient(to right, #3051ea, #19a783);
+    height: 100vh
 }

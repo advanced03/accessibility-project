@@ -1,6 +1,5 @@
 import React from 'react';
 import "@/pages/pages_css/ExpertPortal.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, ListGroup, Tab } from 'react-bootstrap';
 import NavbarComponent from "./components/NavbarComponent";
 

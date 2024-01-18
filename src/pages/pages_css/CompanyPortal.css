@@ -1,4 +1,30 @@
-/*Deze CSS geeft errors dus ik heb het maar weggehaald
+#company-portal {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 15vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 
-    test test test
-*/
+    #company-portal h1 {
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 5vh;
+        font-weight: bold;
+    }
+
+
+
+    .history{
+        width: 15.4vh;
+    }
+
+
+
+.achtergrond {
+    background: linear-gradient(to right, #3051ea, #19a783);
+    height: 100vh
+}
+
+.list-container a {
+    text-decoration: none;
+}
