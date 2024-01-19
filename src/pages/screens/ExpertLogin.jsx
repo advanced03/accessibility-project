@@ -43,7 +43,7 @@ const ExpertLogin = ({
 
                     <Form.Check type="checkbox" label="Blijf ingelogd" className="mt-1" />
 
-                    <Button href="expert_portal" variant="primary" type="submit">
+                    <Button onClick={handleToExpertPortal} variant="primary" type="submit">
                         Aanmelden
                     </Button>
                     <Button
