@@ -1,6 +1,6 @@
-@accessibility_projectg_HostAddress = http://localhost:5188
+@accessibility_projectg_HostAddress = http://localhost:5173
 
-GET {{accessibility_projectg_HostAddress}}/weatherforecast/
+GET {{accessibility_projectg_HostAddress}}/portal/
 Accept: application/json
 
 ###

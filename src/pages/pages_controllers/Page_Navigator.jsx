@@ -36,10 +36,10 @@ const PageNavigator = () => {
     };
 
     const handleToCompanyPortal = () => {
-        navigate('company_portal');
+        navigate('CompanyPortal');
     };
     const handleToExpertPortal = () => {
-        navigate('/expert_portal');
+        navigate('/ExpertPortal');
     };
     
     const handlePortalButtonClick = (selectedUserType) => {
@@ -59,9 +59,9 @@ const PageNavigator = () => {
                 <Route path="/expert_signup" element={<ExpertSignUp handleToExpertLogin={handleToExpertLogin} handleToExpertPortal={handleToExpertPortal} />} />
                 <Route path="/company_signup" element={<CompanySignUp handleToCompanyLogin={handleToCompanyLogin} handleToCompanyPortal={handleToCompanyPortal} />} />
                 <Route path="/portal" element={<PortaalKeuze handlePortalButtonClick={handlePortalButtonClick} />} />
-                <Route path='/expert_portal' element={<ExpertPortal />} />
+                <Route path='/ExpertPortal' element={<ExpertPortal />} />
                 <Route path='/assignment_creator' element={<AssignmentCreator />} />
-                <Route path="/company_portal" element={<CompanyPortal />} />
+                <Route path="/CompanyPortal" element={<CompanyPortal />} />
                 <Route path="/expertProfiel" element={<ExpertProfiel />} />
                 <Route path="/companyProfiel" element={<CompanyProfiel />} />
                 <Route path="/password" element={<Password />} />

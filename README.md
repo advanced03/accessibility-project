@@ -2,7 +2,7 @@
 
 ## Website link
 
-https://accessibilitywebappgroepg.azurewebsites.net
+accessibilityprojectg.azurewebsites.net
 
 ## Inleiding
 
