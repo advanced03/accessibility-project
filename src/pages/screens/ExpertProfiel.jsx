@@ -49,7 +49,7 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                 <Form.Group className="mb-3" controlId="formProfileAge">
                     <Form.Label>Leeftijdscategorie</Form.Label>
                     <FormControl as="select" required>
-                        <option value=""></option>
+                    <option value="">Kies een leeftijdscategorie</option>
                         <option value="option1">Onder de 18</option>
                         <option value="option2">18-30</option>
                         <option value="option3">31-45</option>
@@ -68,16 +68,17 @@ const ExpertProfiel = ({ handleToExpertPortal }) => {
                 <Form.Group className="mb-3" controlId="formProfilePhoneNumber">
                     <Form.Label>Telefoonnummer</Form.Label>
                     <FormControl
-                        type="number"
+                        type="text"
                         placeholder="06 12345678"
                         pattern="[0-9]{10}"
+                        maxLength={10}
                     />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formProfileContactMethod">
                     <Form.Label>Contactmethode</Form.Label>
                     <FormControl as="select" required>
-                        <option value=""></option>
+                    <option value="">Kies een contactmethode</option>
                         <option value="option1">Telefonisch</option>
                         <option value="option2">E-Mail</option>
                     </FormControl>

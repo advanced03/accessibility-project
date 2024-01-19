@@ -133,7 +133,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
 
                     <Form.Group controlId="nummer" className="mt-3">
           <Form.Label>Telefoonnummer:</Form.Label>
-          <Form.Control type="text" name="telnumber" required />
+          <Form.Control type="text" name="telnumber" pattern="[0-9]{10}" required maxLength={10} />
           <Form.Control.Feedback type="invalid">
             Vul een geldig telefoonnummer in.
           </Form.Control.Feedback>

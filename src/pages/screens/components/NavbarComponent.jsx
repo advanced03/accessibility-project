@@ -40,7 +40,10 @@ function NavbarComponent({ portalType }) {
                         <Nav.Link href={homeLink}>Home</Nav.Link>
                         <Nav.Link href={`${portalType}Profiel`}>Profiel</Nav.Link>
                         {portalType === 'company' && (
-                            <Nav.Link href="/assignment_creator">Opdracht aanmaken</Nav.Link>
+                            <>
+                                <Nav.Link href="/assignment_creator">Opdracht aanmaken</Nav.Link>
+                                <Nav.Link href="/admin_dashboard">Administrator Dashboard</Nav.Link>
+                            </>
                         )}
                         <Nav.Link onClick={handleShowLogoutModal}>Log Uit</Nav.Link>
                     </Nav>
@@ -56,7 +59,7 @@ function NavbarComponent({ portalType }) {
                     <Button variant="primary" onClick={handleCloseLogoutModal}>
                         Annuleer
                     </Button>
-                    <Button variant="danger" href="portal">
+                    <Button variant="danger" href="portal" onClick={handleLogout}>
                         Log uit
                     </Button>
                 </Modal.Footer>

@@ -69,7 +69,7 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
                         </Form.Group>
                     </Row>
                     
-                    <Form.Group as={Col} controlId="voorletter" className="mt-3">
+                    <Form.Group as={Col} controlId="bedrijfnaam" className="mt-3">
                         <Form.Label>Bedrijfsnaam:</Form.Label>
                         <Form.Control type="text" required />
                         <Form.Control.Feedback type="invalid">
@@ -149,7 +149,11 @@ export const CompanySignUp = ({ handleToLogin, handleToExpertPortal }) => {
 
                         <Form.Group as={Col} controlId="nummer" className="mt-3">
                             <Form.Label>Telefoonnummer:</Form.Label>
-                            <Form.Control type="text" required />
+                            <Form.Control type="text" 
+                            required 
+                            pattern="[0-9]{10}"
+                            maxLength={10}
+                            />
                             <Form.Control.Feedback type="invalid">
                                 Vul uw telefoonnummer in.
                             </Form.Control.Feedback>
