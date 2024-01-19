@@ -5,8 +5,8 @@ import "@/pages/pages_css/Login.css";
 
 const ExpertLogin = ({
     handleToAanmeld,
-    handleToPortal,
     handleToExpertPortal,
+    handleToPass
 }) => {
     const [validated, setValidated] = useState(false);
 
@@ -47,14 +47,14 @@ const ExpertLogin = ({
                         Aanmelden
                     </Button>
                     <Button
-                        href="expert"
+                        onClick={handleToAanmeld}
                         variant="success"
                         type="submit"
                         className="m-3">
                         Registreren
                     </Button>
 
-                    <a href="password" className="forgotPass ms-5"> Wachtwoord vergeten?</a>
+                    <a onClick={handleToPass} className="forgotPass ms-5"> Wachtwoord vergeten?</a>
                 </Form>
             </div>
         </body>
