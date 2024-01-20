@@ -5,8 +5,8 @@ import "@/pages/pages_css/Login.css";
 
 const CompanyLogin = ({
     handleToAanmeld,
-    handleToPortal,
-    handleToExpertPortal,
+    handleToPass,
+    handleToCompanyPortal,
 }) => {
     const [validated, setValidated] = useState(false);
 
@@ -43,18 +43,18 @@ const CompanyLogin = ({
 
                     <Form.Check type="checkbox" label="Blijf ingelogd" className="mt-1" />
 
-                    <Button href="company_portal" variant="primary" type="submit">
+                    <Button onClick={handleToCompanyPortal} variant="primary" type="submit">
                         Aanmelden
                     </Button>
                     <Button
-                        href="company_signup"
+                        onClick={handleToAanmeld}
                         variant="success"
                         type="submit"
                         className="m-3">
                         Registreren
                     </Button>
 
-                    <a href="password" className="forgotPass ms-5"> Wachtwoord vergeten?</a>
+                    <a onClick={handleToPass} className="forgotPass ms-5"> Wachtwoord vergeten?</a>
                 </Form>
             </div>
         </body>

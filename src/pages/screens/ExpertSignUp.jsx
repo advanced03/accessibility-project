@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 import "@/pages/pages_css/SignUp.css";
 import ExpertSignUpController from "@/pages/pages_controllers/ExpertSignUp_Controller";
 
-export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
+export const ExpertSignUp = ({ handleToExpertLogin }) => {
   const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
@@ -180,7 +180,7 @@ export const ExpertSignUp = ({ handleToLogin, handleToExpertPortal }) => {
         <p className="p-2 mt-3">Heeft u al een account?</p>
 
         <Button
-          href="ExpertLogin"
+          onClick={handleToExpertLogin}
           variant="success"
           type="submit"
           size="sm"
