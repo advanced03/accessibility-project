@@ -1,50 +1,32 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
+using Npgsql;
 
-[Route("api/[controller]")]
-[ApiController]
-public class RegistrationController : ControllerBase
+// ...
+
+[HttpPost("register")]
+public async Task<IActionResult> Register([FromBody] RegistrationModel model)
 {
-    private readonly IConfiguration _configuration;
-
-    public RegistrationController(IConfiguration configuration)
-    {
-        _configuration = configuration;
-    }
-
-    [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegistrationModel model)
+    try
     {
         if (!ModelState.IsValid)
         {
             return BadRequest("Invalid input data");
         }
 
-        // Azure SQL Database connection string
-        string connectionString = _configuration.GetConnectionString("Server=your-server-name.database.windows.net;Database=your-database-name;User Id=your-username;Password=your-password;");
+        string connectionString = _configuration["postgres://postgres.tsxclcisljiwptocxiou:[Supabasehhs@]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"];
 
-        using (SqlConnection connection = new SqlConnection(connectionString))
+        using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
         {
             await connection.OpenAsync();
 
-            // Insert user data into the database
-            string insertQuery = "INSERT INTO Ervaringsdeskundige (Gebruiker_ID, Gebruikersnaam, Wachtwoord, E-Mail, Voorletters, Achternaam, Postcode, Telefoonnummer, Comerciële benadering, Leeftijdsgroep) " +
-                                "VALUES (@Gebruiker_ID, @Gebruikersnaam, @Wachtwoord, @E-mail, @Voorletters, @Achternaam, @Postcode, @Telefoonnummer, @Comerciële benadering, @Leeftijdsgroep)";
+            string insertQuery = "INSERT INTO Ervaringsdeskundige (Gebruiker_ID, Gebruikersnaam, Wachtwoord, E_Mail, Voorletters, Achternaam, Postcode, Telefoonnummer, Comerciële_Benadering, Leeftijdsgroep) " +
+                                "VALUES (@Gebruiker_ID, @Gebruikersnaam, @Wachtwoord, @E_Mail, @Voorletters, @Achternaam, @Postcode, @Telefoonnummer, @Comerciële_Benadering, @Leeftijdsgroep)";
 
-            using (SqlCommand command = new SqlCommand(insertQuery, connection))
+            using (NpgsqlCommand command = new NpgsqlCommand(insertQuery, connection))
             {
-                command.Parameters.AddWithValue("@Gebruikers_ID", model.Gebruikers_ID);
-                command.Parameters.AddWithValue("@Gebruikersnaam", model.Gebruikersnaam);
-                command.Parameters.AddWithValue("@Wachtwoord", model.Wachtwoord);
-                command.Parameters.AddWithValue("@E-Mail", model. E-Mail);
-                command.Parameters.AddWithValue("@Voorletters", model.Voorletters);
-                command.Parameters.AddWithValue("@Achternaam", model.Achternaam);
-                command.Parameters.AddWithValue("@Postcode", model.Postcode);
-                command.Parameters.AddWithValue("@Telefoonnummer", model.Telefoonnummer);
-                command.Parameters.AddWithValue("@Comerciële_Benadering", model.Comerciële benadering);
-                command.Parameters.AddWithValue("@Leeftijdsgroep", model.Leeftijdsgroep);
+                foreach (var prop in model.GetType().GetProperties())
+                {
+                    command.Parameters.AddWithValue("@" + prop.Name, prop.GetValue(model));
+                }
 
                 await command.ExecuteNonQueryAsync();
             }
@@ -52,18 +34,9 @@ public class RegistrationController : ControllerBase
 
         return Ok("Registration successful");
     }
-}
-
-public class RegistrationModel
-{
-    public string Gebruikers_ID { get; set; }
-    public string Gebruikersnaam { get; set; }
-    public string Wachtwoord { get; set; }
-    public string E-Mail { get; set; }
-public string Voorletters { get; set; }
-public string Achternaam { get; set; }
-public string Postcode { get; set; }
-public string Telefoonnummer { get; set; }
-public string Comerciële_Benadering { get; set; }
-public string Leeftijdsgroep { get; set; }
+    catch (Exception ex)
+    {
+        // Log the exception
+        return StatusCode(500, "Internal Server Error");
+    }
 }
