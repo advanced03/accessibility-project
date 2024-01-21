@@ -1,4 +1,5 @@
 ﻿import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Modal from 'react-bootstrap/Modal';
@@ -41,7 +42,7 @@ function NavbarComponent({ portalType }) {
                         <Nav.Link href={`${portalType}Profiel`}>Profiel</Nav.Link>
                         {portalType === 'company' && (
                             <>
-                                <Nav.Link href="/assignment_creator">Opdracht aanmaken</Nav.Link>
+                                <Link to="/assignment_creator">Opdracht aanmaken</Link>
                                 <Nav.Link href="/admin_dashboard">Administrator Dashboard</Nav.Link>
                             </>
                         )}
