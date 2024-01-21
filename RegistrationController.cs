@@ -1,42 +1,59 @@
 using Npgsql;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Threading.Tasks;
 
-// ...
-
-[HttpPost("register")]
-public async Task<IActionResult> Register([FromBody] RegistrationModel model)
+namespace YourNamespace.Controllers
 {
-    try
+    [ApiController]
+    [Route("api/expert")]
+    public class ExpertController : ControllerBase
     {
-        if (!ModelState.IsValid)
+        private readonly IConfiguration _configuration;
+
+        public ExpertController(IConfiguration configuration)
         {
-            return BadRequest("Invalid input data");
+            _configuration = configuration;
         }
 
-        string connectionString = _configuration["postgres://postgres.tsxclcisljiwptocxiou:[Supabasehhs@]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"];
-
-        using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] RegistrationModel model)
         {
-            await connection.OpenAsync();
-
-            string insertQuery = "INSERT INTO Ervaringsdeskundige (Gebruiker_ID, Gebruikersnaam, Wachtwoord, E_Mail, Voorletters, Achternaam, Postcode, Telefoonnummer, Comerciële_Benadering, Leeftijdsgroep) " +
-                                "VALUES (@Gebruiker_ID, @Gebruikersnaam, @Wachtwoord, @E_Mail, @Voorletters, @Achternaam, @Postcode, @Telefoonnummer, @Comerciële_Benadering, @Leeftijdsgroep)";
-
-            using (NpgsqlCommand command = new NpgsqlCommand(insertQuery, connection))
+            try
             {
-                foreach (var prop in model.GetType().GetProperties())
+                if (!ModelState.IsValid)
                 {
-                    command.Parameters.AddWithValue("@" + prop.Name, prop.GetValue(model));
+                    return BadRequest("Invalid input data");
                 }
 
-                await command.ExecuteNonQueryAsync();
+                string connectionString = _configuration["postgres://postgres.tsxclcisljiwptocxiou:[Supabasehhs@]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"];
+
+                using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+
+                    string insertQuery = "INSERT INTO Ervaringsdeskundige (Gebruiker_ID, Gebruikersnaam, Wachtwoord, E_Mail, Voorletters, Achternaam, Postcode, Telefoonnummer, Comerciële_Benadering, Leeftijdsgroep) " +
+                                         "VALUES (@Gebruiker_ID, @Gebruikersnaam, @Wachtwoord, @E_Mail, @Voorletters, @Achternaam, @Postcode, @Telefoonnummer, @Comerciële_Benadering, @Leeftijdsgroep)";
+
+                    using (NpgsqlCommand command = new NpgsqlCommand(insertQuery, connection))
+                    {
+                        foreach (var prop in model.GetType().GetProperties())
+                        {
+                            command.Parameters.AddWithValue("@" + prop.Name, prop.GetValue(model));
+                        }
+
+                        await command.ExecuteNonQueryAsync();
+                    }
+                }
+
+                return Ok(new { Message = "Registration successful" });
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(500, "Internal Server Error");
             }
         }
-
-        return Ok("Registration successful");
-    }
-    catch (Exception ex)
-    {
-        // Log the exception
-        return StatusCode(500, "Internal Server Error");
     }
 }
