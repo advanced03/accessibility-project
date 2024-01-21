@@ -146,8 +146,8 @@ export const ExpertSignUp = ({ handleToExpertLogin }) => {
             <Form.Label>Voorkeur benadering:</Form.Label>
             <FormControl as="select" required>
               <option value=""></option>
-              <option value="option1">Optie 1</option>
-              <option value="option2">Optie 2</option>
+              <option value="option1">E-Mail</option>
+              <option value="option2">Telefonisch</option>
             </FormControl>
             <Form.Control.Feedback type="invalid">
               Kies een voorkeur.
@@ -161,8 +161,8 @@ export const ExpertSignUp = ({ handleToExpertLogin }) => {
             <Form.Label>Voorkeur onderzoek:</Form.Label>
             <FormControl as="select" required>
               <option value=""></option>
-              <option value="option1">Optie 1</option>
-              <option value="option2">Optie 2</option>
+              <option value="option1">Slechtziend</option>
+              <option value="option2">ADHD</option>
             </FormControl>
             <Form.Control.Feedback type="invalid">
               Kies een voorkeur.
