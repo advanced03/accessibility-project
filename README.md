@@ -1,8 +1,7 @@
 # Case Accessibility 2023-2024
 
 ## Website link
-
-accessibilityprojectg.azurewebsites.net
+https://accessibility-project-blond.vercel.app/portal
 
 ## Inleiding
 
