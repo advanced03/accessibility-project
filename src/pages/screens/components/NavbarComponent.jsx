@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import "@/pages/pages_css/NavbarComponent.css";
 
 function NavbarComponent({ portalType }) {
     const [showLogoutModal, setShowLogoutModal] = useState(false);
@@ -24,7 +25,7 @@ function NavbarComponent({ portalType }) {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" fixed="top">
+            <Navbar collapseOnSelect expand="lg" className="custom-navbar" fixed="top">
                 <Navbar.Brand>
                     <img
                         alt="Logo van stichting accessibility"
@@ -38,15 +39,26 @@ function NavbarComponent({ portalType }) {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href={homeLink}>Home</Nav.Link>
-                        <Nav.Link href={`${portalType}Profiel`}>Profiel</Nav.Link>
+                        <Link to={portalType === 'company' ? '/CompanyPortal' : '/ExpertPortal'} className="nav-link">
+                            Home
+                        </Link>
+                        <Link to={`${portalType === 'company' ? '/CompanyProfiel' : '/ExpertProfiel'}`} className="nav-link">
+                            Profiel
+                        </Link>
+
                         {portalType === 'company' && (
                             <>
-                                <Link to="/assignment_creator">Opdracht aanmaken</Link>
-                                <Nav.Link href="/admin_dashboard">Administrator Dashboard</Nav.Link>
+                                <Link to="/assignment_creator" className="nav-link">
+                                    Opdracht aanmaken
+                                </Link>
+                                <Link to="/admin_dashboard" className="nav-link">
+                                    Administrator Dashboard
+                                </Link>
                             </>
                         )}
-                        <Nav.Link onClick={handleShowLogoutModal}>Log Uit</Nav.Link>
+                        <Link onClick={handleShowLogoutModal} className="nav-link">
+                            Log Uit
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
